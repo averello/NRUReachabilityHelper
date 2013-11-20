@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		DE4890BE183D5DFD00E09068 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4890BD183D5DFD00E09068 /* Foundation.framework */; };
-		DE4890C3183D5DFD00E09068 /* NRUReachabilityHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE4890C2183D5DFD00E09068 /* NRUReachabilityHelper.h */; };
-		DE4890C5183D5DFD00E09068 /* NRUReachabilityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4890C4183D5DFD00E09068 /* NRUReachabilityHelper.m */; };
 		DE4890CC183D5DFD00E09068 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4890CB183D5DFD00E09068 /* XCTest.framework */; };
 		DE4890CD183D5DFD00E09068 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4890BD183D5DFD00E09068 /* Foundation.framework */; };
 		DE4890CF183D5DFD00E09068 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4890CE183D5DFD00E09068 /* UIKit.framework */; };
 		DE4890D2183D5DFD00E09068 /* libNRUReachabilityHelper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4890BA183D5DFD00E09068 /* libNRUReachabilityHelper.a */; };
 		DE4890D8183D5DFD00E09068 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE4890D6183D5DFD00E09068 /* InfoPlist.strings */; };
 		DE4890DA183D5DFD00E09068 /* NRUReachabilityHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4890D9183D5DFD00E09068 /* NRUReachabilityHelperTests.m */; };
+		DE4890E5183D5E0900E09068 /* NRUReachabilityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4890E4183D5E0900E09068 /* NRUReachabilityHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +34,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				DE4890C3183D5DFD00E09068 /* NRUReachabilityHelper.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +43,14 @@
 		DE4890BA183D5DFD00E09068 /* libNRUReachabilityHelper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNRUReachabilityHelper.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4890BD183D5DFD00E09068 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DE4890C1183D5DFD00E09068 /* NRUReachabilityHelper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NRUReachabilityHelper-Prefix.pch"; sourceTree = "<group>"; };
-		DE4890C2183D5DFD00E09068 /* NRUReachabilityHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRUReachabilityHelper.h; sourceTree = "<group>"; };
-		DE4890C4183D5DFD00E09068 /* NRUReachabilityHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUReachabilityHelper.m; sourceTree = "<group>"; };
 		DE4890CA183D5DFD00E09068 /* NRUReachabilityHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NRUReachabilityHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE4890CB183D5DFD00E09068 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		DE4890CE183D5DFD00E09068 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DE4890D5183D5DFD00E09068 /* NRUReachabilityHelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NRUReachabilityHelperTests-Info.plist"; sourceTree = "<group>"; };
 		DE4890D7183D5DFD00E09068 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE4890D9183D5DFD00E09068 /* NRUReachabilityHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUReachabilityHelperTests.m; sourceTree = "<group>"; };
+		DE4890E3183D5E0900E09068 /* NRUReachabilityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRUReachabilityHelper.h; sourceTree = "<group>"; };
+		DE4890E4183D5E0900E09068 /* NRUReachabilityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRUReachabilityHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +108,8 @@
 		DE4890BF183D5DFD00E09068 /* NRUReachabilityHelper */ = {
 			isa = PBXGroup;
 			children = (
-				DE4890C2183D5DFD00E09068 /* NRUReachabilityHelper.h */,
-				DE4890C4183D5DFD00E09068 /* NRUReachabilityHelper.m */,
+				DE4890E3183D5E0900E09068 /* NRUReachabilityHelper.h */,
+				DE4890E4183D5E0900E09068 /* NRUReachabilityHelper.m */,
 				DE4890C0183D5DFD00E09068 /* Supporting Files */,
 			);
 			path = NRUReachabilityHelper;
@@ -224,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4890C5183D5DFD00E09068 /* NRUReachabilityHelper.m in Sources */,
+				DE4890E5183D5E0900E09068 /* NRUReachabilityHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
