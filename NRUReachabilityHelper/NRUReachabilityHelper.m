@@ -12,7 +12,6 @@ NSString *const NRUNetworkReachabilityChangedNotification = @"kNRUNetworkReachab
 
 #define kShouldPrintReachabilityFlags 0
 
-
 inline static void PrintReachabilityFlags(SCNetworkReachabilityFlags    flags, const char* comment) {
 #if kShouldPrintReachabilityFlags
 	
@@ -36,7 +35,7 @@ inline static void PrintReachabilityFlags(SCNetworkReachabilityFlags    flags, c
 @interface NRUReachabilityHelper ()
 @property (nonatomic, readwrite, assign) BOOL localWiFiRef, alreadyStarted;
 @property (nonatomic, readwrite, assign) SCNetworkReachabilityRef reachabilityRef;
-@property (nonatomic, readwrite, assign) ReachabilityStatusNetworkStatus lastReachabilityStatus;
+@property (nonatomic, readwrite, assign) NRUReachabilityStatusNetworkStatus lastReachabilityStatus;
 @property (nonatomic, assign) CFRunLoopRef runLoop;
 @end
 
@@ -146,23 +145,23 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
 #pragma mark Network Flag Handling
 
-- (ReachabilityStatusNetworkStatus) localWiFiStatusForFlags: (SCNetworkReachabilityFlags) flags {
+- (NRUReachabilityStatusNetworkStatus) localWiFiStatusForFlags: (SCNetworkReachabilityFlags) flags {
 	PrintReachabilityFlags(flags, "localWiFiStatusForFlags");
 
-	ReachabilityStatusNetworkStatus retVal = ReachabilityStatusNotReachable;
+	NRUReachabilityStatusNetworkStatus retVal = ReachabilityStatusNotReachable;
 	if((flags & kSCNetworkReachabilityFlagsReachable) && (flags & kSCNetworkReachabilityFlagsIsDirect))
 		retVal = ReachabilityStatusReachableViaWiFi;	
 
 	return retVal;
 }
 
-- (ReachabilityStatusNetworkStatus) networkStatusForFlags: (SCNetworkReachabilityFlags) flags {
+- (NRUReachabilityStatusNetworkStatus) networkStatusForFlags: (SCNetworkReachabilityFlags) flags {
 	PrintReachabilityFlags(flags, "networkStatusForFlags");
 	if ((flags & kSCNetworkReachabilityFlagsReachable) == 0)
 		// if target host is not reachable
 		return ReachabilityStatusNotReachable;
 
-	ReachabilityStatusNetworkStatus retVal = ReachabilityStatusNotReachable;
+	NRUReachabilityStatusNetworkStatus retVal = ReachabilityStatusNotReachable;
 	
 	if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0)
 		// if target host is reachable and no connection is required
@@ -196,10 +195,10 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 	return NO;
 }
 
-- (ReachabilityStatusNetworkStatus) currentReachabilityStatus
+- (NRUReachabilityStatusNetworkStatus) currentReachabilityStatus
 {
 	NSAssert(self.reachabilityRef != NULL, @"currentNetworkStatus called with NULL reachabilityRef");
-	ReachabilityStatusNetworkStatus retVal = ReachabilityStatusNotReachable;
+	NRUReachabilityStatusNetworkStatus retVal = ReachabilityStatusNotReachable;
 	SCNetworkReachabilityFlags flags;
 	if (SCNetworkReachabilityGetFlags(self.reachabilityRef, &flags)) {
 		if(self.localWiFiRef)
