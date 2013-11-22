@@ -15,6 +15,7 @@
 		DE4890D8183D5DFD00E09068 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE4890D6183D5DFD00E09068 /* InfoPlist.strings */; };
 		DE4890DA183D5DFD00E09068 /* NRUReachabilityHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4890D9183D5DFD00E09068 /* NRUReachabilityHelperTests.m */; };
 		DE4890E5183D5E0900E09068 /* NRUReachabilityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = DE4890E4183D5E0900E09068 /* NRUReachabilityHelper.m */; };
+		DE4890FA183D6BD300E09068 /* NRUReachabilityHelper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE4890E3183D5E0900E09068 /* NRUReachabilityHelper.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,10 +31,11 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		DE4890B8183D5DFD00E09068 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				DE4890FA183D6BD300E09068 /* NRUReachabilityHelper.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +409,7 @@
 				DE4890DF183D5DFD00E09068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE4890E0183D5DFD00E09068 /* Build configuration list for PBXNativeTarget "NRUReachabilityHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +418,7 @@
 				DE4890E2183D5DFD00E09068 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
