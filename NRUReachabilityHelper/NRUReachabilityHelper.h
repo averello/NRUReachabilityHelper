@@ -49,6 +49,52 @@ FOUNDATION_EXTERN NSString *const NRUNetworkReachabilityChangedNotification;
  *	@brief The network's reachability helper.
  *
  *	@details Instanciate a helper object with the class constructors. Use it either arbitrary with @ref currentReachabilityStatus or with a `UINotification` by registering with @ref startNotifier. Finally you can use a block oriented approach using the @ref notificationBlock.
+ @code{.m}
+ NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+ [notificationCenter addObserverForName:NRUNetworkReachabilityChangedNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+ NRUReachabilityHelper *helper = note.object;
+ NRUReachabilityStatusNetworkStatus status = helper.currentReachabilityStatus;
+	switch (status) {
+		case NRUReachabilityStatusNotReachable:
+			#No internet connection
+			break;
+		case NRUReachabilityStatusReachableViaWiFi:
+		case NRUReachabilityStatusReachableViaWWAN:
+			#Internet
+			break;
+		default:
+			break;
+	}
+ }];
+ NRUReachabilityHelper *helper = [NRUReachabilityHelper reachabilityForInternetConnection];
+ [helper startNotifier];
+ //...
+ [helper stopNotifier];
+ [notificationCenter removeObserver:self name:NRUNetworkReachabilityChangedNotification object:nil];
+ @endcode
+ 
+ or you can use the block approach:
+ 
+ @code{.m}
+ NRUReachabilityHelper *helper = [NRUReachabilityHelper reachabilityForInternetConnection];
+ helper.notificationBlock = ^(NRUReachabilityHelper *reachabilityHelper) {
+ NRUReachabilityStatusNetworkStatus status = reachabilityHelper.currentReachabilityStatus;
+	switch (status) {
+		case NRUReachabilityStatusNotReachable:
+			#No internet connection
+			break;
+		case NRUReachabilityStatusReachableViaWiFi:
+		case NRUReachabilityStatusReachableViaWWAN:
+			#Internet
+			break;
+		default:
+			break;
+	}
+ };
+ [helper startNotifier];
+ //...
+ [helper stopNotifier];
+ @endcode
  */
 NS_CLASS_AVAILABLE(10_7, 5_0) @interface NRUReachabilityHelper: NSObject
 
@@ -99,8 +145,8 @@ NS_CLASS_AVAILABLE(10_7, 5_0) @interface NRUReachabilityHelper: NSObject
 /*!
  *	@public
  *	@brief Start listening for reachability notifications on the current run loop
-	@details Registers the network reachability helper to the current loop. If more subsequent calls are made to this method without calling @ref stopNotifier in between then all but the first one will return `NO`.
- *	@returns `YES` if the registration completed successfully, `NO` otherwise.
+	@details Registers the network reachability helper to the current loop. If more subsequent calls are made to this method without calling @ref stopNotifier in between then all but the first one will return `NO`. In the case subsequent calls
+ *	@returns `YES` if the registration completed successfully, `NO` if it fails to schedule on the current run loop.
  */
 - (BOOL) startNotifier;
 /*!

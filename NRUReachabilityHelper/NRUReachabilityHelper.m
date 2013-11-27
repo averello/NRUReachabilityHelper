@@ -83,11 +83,8 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 		return retVal;
 	
 	SCNetworkReachabilityContext context;
-	context.version = 0;
+	memset(&context, 0, sizeof(SCNetworkConnectionContext));
 	context.info = (__bridge void *)(self);
-	context.retain = NULL;
-	context.release = NULL;
-	context.copyDescription = NULL;
 	_runLoop = CFRunLoopGetCurrent();
 	if(SCNetworkReachabilitySetCallback(self.reachabilityRef, ReachabilityCallback, &context))
 		if(SCNetworkReachabilityScheduleWithRunLoop(self.reachabilityRef, _runLoop, kCFRunLoopDefaultMode))
