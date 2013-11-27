@@ -19,7 +19,7 @@ Now open the file html/index.html
 Usage
 -----
 The notification driven approach:
-```m
+```objc
 NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
 [notificationCenter addObserverForName:NRUNetworkReachabilityChangedNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
 	NRUReachabilityHelper *helper = note.object;
@@ -43,7 +43,7 @@ NRUReachabilityHelper *helper = [NRUReachabilityHelper reachabilityForInternetCo
 [notificationCenter removeObserver:self name:NRUNetworkReachabilityChangedNotification object:nil];
 ```
 and the block driven approach:
-```m
+```objc
 NRUReachabilityHelper *helper = [NRUReachabilityHelper reachabilityForInternetConnection];
 helper.notificationBlock = ^(NRUReachabilityHelper *reachabilityHelper) {
 	NRUReachabilityStatusNetworkStatus status = reachabilityHelper.currentReachabilityStatus;
