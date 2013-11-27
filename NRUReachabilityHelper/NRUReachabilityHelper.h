@@ -4,7 +4,7 @@
  *	@details A utility class for testing network statuses.
  *
  *  Created by @author George Boumis
- *  @date 20/11/13.
+ *  @date 2013/11/20.
  *	@version 1.0
  *  @copyright Copyright (c) 2013 George Boumis <developer.george.boumis@gmail.com>. All rights reserved.
  
@@ -14,6 +14,8 @@
 #import <Foundation/Foundation.h>
 #import <SystemConfiguration/SystemConfiguration.h>
 
+@class NRUReachabilityHelper;
+
 /*!
  *	@public
  *	@enum NRUReachabilityStatusNetworkStatus
@@ -21,10 +23,18 @@
  *	@brief The enumeration indicating the different netowrk statuses.
  */
 typedef NS_ENUM(NSInteger, NRUReachabilityStatusNetworkStatus) {
-	ReachabilityStatusNotReachable = 0, /*!< This status indicates that the network is not reachable. */
-	ReachabilityStatusReachableViaWiFi, /*!< This status indicates that the network is reachable through WiFi. */
-	ReachabilityStatusReachableViaWWAN	/*!< This status indicates that the network is reachable through WWAN interfaces like 3G. */
+	NRUReachabilityStatusNotReachable = 0, /*!< This status indicates that the network is not reachable. */
+	NRUReachabilityStatusReachableViaWiFi, /*!< This status indicates that the network is reachable through WiFi. */
+	NRUReachabilityStatusReachableViaWWAN	/*!< This status indicates that the network is reachable through WWAN interfaces like 3G. */
 };
+
+/*!
+ @public
+ @related nru
+ @brief The block to be called when a reachability change occurs.
+ @param[in] helper
+ */
+typedef void (^NRUReachabilityHelperNotificationBlock)(NRUReachabilityHelper *helper);
 
 /*!
  *	@brief The notification for network changes.
@@ -38,23 +48,28 @@ FOUNDATION_EXTERN NSString *const NRUNetworkReachabilityChangedNotification;
  *	@related nru
  *	@brief The network's reachability helper.
  *
- *	@details Instanciate a helper object with the class constructors. Use it either arbitrary with @ref currentReachabilityStatus or with a Notification by registering with @ref startNotifier.
+ *	@details Instanciate a helper object with the class constructors. Use it either arbitrary with @ref currentReachabilityStatus or with a `UINotification` by registering with @ref startNotifier. Finally you can use a block oriented approach using the @ref notificationBlock.
  */
 NS_CLASS_AVAILABLE(10_7, 5_0) @interface NRUReachabilityHelper: NSObject
+
 /*!
  *	@property currentReachabilityStatus
  *	@brief Used to consult the current network reachability status.
  *	@returns the current network reachability status.
  */
 @property (nonatomic, readonly) NRUReachabilityStatusNetworkStatus currentReachabilityStatus;
-
 /*!
  *	@property lastReachabilityStatus
  *	@brief Used to consult the last network reachability status.
  *	@returns the last network reachability status.
  */
 @property (nonatomic, readonly) NRUReachabilityStatusNetworkStatus lastReachabilityStatus;
-
+/*!
+ *	@property notificationBlock
+ *	@brief Called when a reachability change occurs.
+ *  @details This block is called only after a successful call to @ref startNotifier method. This block is no more called after a call to @ref stopNotifier method.
+ */
+@property (nonatomic, strong) NRUReachabilityHelperNotificationBlock notificationBlock;
 
 /*!
  *	@public
@@ -62,14 +77,12 @@ NS_CLASS_AVAILABLE(10_7, 5_0) @interface NRUReachabilityHelper: NSObject
  *	@returns a network reachability helper that checks the availability of a particular host name.
  */
 + (NRUReachabilityHelper*)reachabilityWithHostName:(NSString *)hostName;
-
 /*!
  *	@public
  *	@brief Use to check the reachability of a particular IP address.
  *	@returns a network reachability helper that checks the availability of a particular IP address.
  */
 + (NRUReachabilityHelper*)reachabilityWithAddress:(const struct sockaddr_in *)hostAddress;
-
 /*!
  *	@public
  *	@brief Checks whether the default route is available.
@@ -77,14 +90,12 @@ NS_CLASS_AVAILABLE(10_7, 5_0) @interface NRUReachabilityHelper: NSObject
  *	@returns a network reachability helper that checks if the default route is available.
  */
 + (NRUReachabilityHelper*) reachabilityForInternetConnection;
-
 /*!
  *	@public
  *	@brief Checks whether a local wifi connection is available.
  *	@returns a network reachability helper that checks if the device is connected to a WiFi.
  */
 + (NRUReachabilityHelper*) reachabilityForLocalWiFi;
-
 /*!
  *	@public
  *	@brief Start listening for reachability notifications on the current run loop
@@ -92,13 +103,11 @@ NS_CLASS_AVAILABLE(10_7, 5_0) @interface NRUReachabilityHelper: NSObject
  *	@returns `YES` if the registration completed successfully, `NO` otherwise.
  */
 - (BOOL) startNotifier;
-
 /*!
  *	@public
  *	@brief Stop listening for reachability notifications.
  */
 - (void) stopNotifier;
-
 /*!
  *	@public
  *	@brief Indicates whether or not a connection is required.

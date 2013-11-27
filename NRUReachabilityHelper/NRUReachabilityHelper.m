@@ -1,4 +1,3 @@
-
 #import <sys/socket.h>
 #import <netinet/in.h>
 #import <netinet6/in6.h>
@@ -15,7 +14,7 @@ NSString *const NRUNetworkReachabilityChangedNotification = @"kNRUNetworkReachab
 inline static void PrintReachabilityFlags(SCNetworkReachabilityFlags    flags, const char* comment) {
 #if kShouldPrintReachabilityFlags
 	
-    GPLog(@"Reachability Flag Status: %c%c %c%c%c%c%c%c%c %s\n",
+    NSLog(@"Reachability Flag Status: %c%c %c%c%c%c%c%c%c %s\n",
 			(flags & kSCNetworkReachabilityFlagsIsWWAN)				  ? 'W' : '-',
 			(flags & kSCNetworkReachabilityFlagsReachable)            ? 'R' : '-',
 			
@@ -43,17 +42,24 @@ inline static void PrintReachabilityFlags(SCNetworkReachabilityFlags    flags, c
 @implementation NRUReachabilityHelper
 
 static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReachabilityFlags flags, void* info) {
-	#pragma unused (target, flags)
-	NSCAssert(info != NULL, @"info was NULL in ReachabilityCallback");
-	NSCAssert([(__bridge NSObject*) info isKindOfClass: [NRUReachabilityHelper class]], @"info was wrong class in ReachabilityCallback");
-
-	//We're on the main RunLoop, so an NSAutoreleasePool is not necessary, but is added defensively
-	// in case someon uses the Reachablity object in a different thread.
 	@autoreleasepool {
+		#pragma unused (target, flags)
+		NSCAssert(info != NULL, @"info was NULL in ReachabilityCallback");
+		NSCAssert([(__bridge NSObject*) info isKindOfClass: [NRUReachabilityHelper class]], @"info was wrong class in ReachabilityCallback");
+
+		//We're on the main RunLoop, so an NSAutoreleasePool is not necessary, but is added defensively
+		// in case someon uses the Reachablity object in a different thread.
+	
 		NRUReachabilityHelper* noteObject = (__bridge NRUReachabilityHelper*) info;
-		// Post a notification to notify the client that the network reachability changed.
-		[[NSNotificationCenter defaultCenter] postNotificationName: NRUNetworkReachabilityChangedNotification object: noteObject];
+		[noteObject handleReachabilityCallback];
 	}
+}
+
+- (void)handleReachabilityCallback {
+	// Post a notification to notify the client that the network reachability changed.
+	if (nil!=_notificationBlock)
+		_notificationBlock(self);
+	[[NSNotificationCenter defaultCenter] postNotificationName: NRUNetworkReachabilityChangedNotification object: self];
 }
 
 - (instancetype)initWithReachabilityRef:(SCNetworkReachabilityRef)reachability localWiFi:(BOOL)localwifi {
@@ -148,9 +154,9 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 - (NRUReachabilityStatusNetworkStatus) localWiFiStatusForFlags: (SCNetworkReachabilityFlags) flags {
 	PrintReachabilityFlags(flags, "localWiFiStatusForFlags");
 
-	NRUReachabilityStatusNetworkStatus retVal = ReachabilityStatusNotReachable;
+	NRUReachabilityStatusNetworkStatus retVal = NRUReachabilityStatusNotReachable;
 	if((flags & kSCNetworkReachabilityFlagsReachable) && (flags & kSCNetworkReachabilityFlagsIsDirect))
-		retVal = ReachabilityStatusReachableViaWiFi;	
+		retVal = NRUReachabilityStatusReachableViaWiFi;
 
 	return retVal;
 }
@@ -159,14 +165,14 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 	PrintReachabilityFlags(flags, "networkStatusForFlags");
 	if ((flags & kSCNetworkReachabilityFlagsReachable) == 0)
 		// if target host is not reachable
-		return ReachabilityStatusNotReachable;
+		return NRUReachabilityStatusNotReachable;
 
-	NRUReachabilityStatusNetworkStatus retVal = ReachabilityStatusNotReachable;
+	NRUReachabilityStatusNetworkStatus retVal = NRUReachabilityStatusNotReachable;
 	
 	if ((flags & kSCNetworkReachabilityFlagsConnectionRequired) == 0)
 		// if target host is reachable and no connection is required
 		//  then we'll assume (for now) that your on Wi-Fi
-		retVal = ReachabilityStatusReachableViaWiFi;
+		retVal = NRUReachabilityStatusReachableViaWiFi;
 	
 	
 	if ((((flags & kSCNetworkReachabilityFlagsConnectionOnDemand ) != 0) ||
@@ -176,13 +182,13 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
 			if ((flags & kSCNetworkReachabilityFlagsInterventionRequired) == 0)
 				// ... and no [user] intervention is needed
-				retVal = ReachabilityStatusReachableViaWiFi;
+				retVal = NRUReachabilityStatusReachableViaWiFi;
 		}
 	
 	if ((flags & kSCNetworkReachabilityFlagsIsWWAN) == kSCNetworkReachabilityFlagsIsWWAN)
 		// ... but WWAN connections are OK if the calling application
 		//     is using the CFNetwork (CFSocketStream?) APIs.
-		retVal = ReachabilityStatusReachableViaWWAN;
+		retVal = NRUReachabilityStatusReachableViaWWAN;
 	return retVal;
 }
 
@@ -198,7 +204,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 - (NRUReachabilityStatusNetworkStatus) currentReachabilityStatus
 {
 	NSAssert(self.reachabilityRef != NULL, @"currentNetworkStatus called with NULL reachabilityRef");
-	NRUReachabilityStatusNetworkStatus retVal = ReachabilityStatusNotReachable;
+	NRUReachabilityStatusNetworkStatus retVal = NRUReachabilityStatusNotReachable;
 	SCNetworkReachabilityFlags flags;
 	if (SCNetworkReachabilityGetFlags(self.reachabilityRef, &flags)) {
 		if(self.localWiFiRef)
