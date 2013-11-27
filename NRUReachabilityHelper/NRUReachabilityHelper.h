@@ -1,7 +1,7 @@
 /*!
  *  @file NRUReachabilityHelper.h
  *  @brief Network Reachability Utility
- *	@details A utility class for testing network statuses.
+ *	@details A utility class for testing network rechability statuses on iOS.
  *
  *  Created by @author George Boumis
  *  @date 2013/11/20.

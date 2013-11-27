@@ -53,6 +53,8 @@
 		DE4890D9183D5DFD00E09068 /* NRUReachabilityHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRUReachabilityHelperTests.m; sourceTree = "<group>"; };
 		DE4890E3183D5E0900E09068 /* NRUReachabilityHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRUReachabilityHelper.h; sourceTree = "<group>"; };
 		DE4890E4183D5E0900E09068 /* NRUReachabilityHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRUReachabilityHelper.m; sourceTree = "<group>"; };
+		DE578B60184683640098BA81 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DE578B611846836A0098BA81 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,8 @@
 		DE4890B1183D5DFD00E09068 = {
 			isa = PBXGroup;
 			children = (
+				DE578B611846836A0098BA81 /* README.md */,
+				DE578B60184683640098BA81 /* LICENSE */,
 				DE4890BF183D5DFD00E09068 /* NRUReachabilityHelper */,
 				DE4890D3183D5DFD00E09068 /* NRUReachabilityHelperTests */,
 				DE4890BC183D5DFD00E09068 /* Frameworks */,
