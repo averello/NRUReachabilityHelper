@@ -13,7 +13,7 @@ Command line exemple :
 cd doc
 doxygen Doxyfile
 ```
-Now open the file doc/index.html
+Now open the file html/index.html
 
 
 Usage
