@@ -31,8 +31,13 @@ inline static void PrintReachabilityFlags(SCNetworkReachabilityFlags    flags, c
 }
 
 
-@interface NRUReachabilityHelper ()
-@property (nonatomic, readwrite, assign) BOOL localWiFiRef, alreadyStarted;
+@interface NRUReachabilityHelper () {
+	struct {
+		unsigned int _alreadyStarted:1;
+		unsigned int _invokeNotificationBlockOnMainRunLoop:1;
+	} _flags;
+}
+@property (nonatomic, readwrite, assign) BOOL localWiFiRef;
 @property (nonatomic, readwrite, assign) SCNetworkReachabilityRef reachabilityRef;
 @property (nonatomic, readwrite, assign) NRUReachabilityStatusNetworkStatus lastReachabilityStatus;
 @property (nonatomic, assign) CFRunLoopRef runLoop;
@@ -57,8 +62,14 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
 - (void)handleReachabilityCallback {
 	// Post a notification to notify the client that the network reachability changed.
-	if (nil!=_notificationBlock)
-		_notificationBlock(self);
+	if (nil!=_notificationBlock) {
+		if (_flags._invokeNotificationBlockOnMainRunLoop)
+			[[NSOperationQueue mainQueue] addOperationWithBlock:^{
+				_notificationBlock(self);
+			}];
+		else
+			_notificationBlock(self);
+	}
 	[[NSNotificationCenter defaultCenter] postNotificationName: NRUNetworkReachabilityChangedNotification object: self];
 }
 
@@ -79,7 +90,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 
 - (BOOL) startNotifier {
 	BOOL retVal = NO;
-	if ( _alreadyStarted )
+	if ( _flags._alreadyStarted )
 		return retVal;
 	
 	SCNetworkReachabilityContext context;
@@ -88,7 +99,7 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 	_runLoop = CFRunLoopGetCurrent();
 	if(SCNetworkReachabilitySetCallback(self.reachabilityRef, ReachabilityCallback, &context))
 		if(SCNetworkReachabilityScheduleWithRunLoop(self.reachabilityRef, _runLoop, kCFRunLoopDefaultMode))
-			retVal = YES, _alreadyStarted = YES;
+			retVal = YES, _flags._alreadyStarted = YES;
 	return retVal;
 }
 
@@ -212,4 +223,13 @@ static void ReachabilityCallback(SCNetworkReachabilityRef target, SCNetworkReach
 	_lastReachabilityStatus = retVal;
 	return retVal;
 }
+
+- (BOOL)shouldInvokeNotificationOnMain {
+	return _flags._invokeNotificationBlockOnMainRunLoop;
+}
+
+- (void)setInvokeNotificationBlockOnMain:(BOOL)invokeNotificationBlockOnMain {
+	_flags._invokeNotificationBlockOnMainRunLoop = invokeNotificationBlockOnMain;
+}
+
 @end

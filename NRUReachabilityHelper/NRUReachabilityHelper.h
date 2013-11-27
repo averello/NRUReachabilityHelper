@@ -113,9 +113,15 @@ NS_CLASS_AVAILABLE(10_7, 5_0) @interface NRUReachabilityHelper: NSObject
 /*!
  *	@property notificationBlock
  *	@brief Called when a reachability change occurs.
- *  @details This block is called only after a successful call to @ref startNotifier method. This block is no more called after a call to @ref stopNotifier method.
+ *  @details This block is called only after a successful call to @ref startNotifier method. This block is no more called after a call to @ref stopNotifier method. This block is called in the same runloop the @ref startNotifier call was made.
  */
 @property (nonatomic, strong) NRUReachabilityHelperNotificationBlock notificationBlock;
+/*!
+ *	@property invokeNotificationBlockOnMain
+ *	@brief Indicates in which run loop to call the notificaiton block.
+ *  @details If this property is set to `YES` then the @ref notificationBlock, if provided, will be invoked on the main run loop. Otherwise the block will be invoked on the run loop the @ref startNotifier took place.
+ */
+@property (nonatomic, assign, getter = shouldInvokeNotificationOnMain) BOOL invokeNotificationBlockOnMain;
 
 /*!
  *	@public
