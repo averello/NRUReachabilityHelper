@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D57AD7A2C5A5B4C44A251C6068B21C9 /* NRUReachabilityHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 5929E58259B534F613997A1B354C6698 /* NRUReachabilityHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		542F0BF48EC715F4AE58B17C9F813446 /* Pods-NRUReachabilityHelper_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 892F8EC57E0716F333AE59ADFC57EF5E /* Pods-NRUReachabilityHelper_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B9D86FA7DAA1F51E9D72DFCA8CE2E4B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		8563B0A7B25D9B05600BF670CE1FCB44 /* NRUReachabilityHelper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F71B617DD575E7E1F72BDEC9B1BE6323 /* NRUReachabilityHelper-dummy.m */; };
+		A320CD364942A766F75A921965FE4573 /* Pods-NRUReachabilityHelper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9516D1BEAD358C0CC673D792F51857 /* Pods-NRUReachabilityHelper_Tests-dummy.m */; };
+		BC6FD2CB313637FD7BCD168B41A76627 /* NRUReachabilityHelper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 482AC706F3CD922C9FBA2E184CC50C5B /* NRUReachabilityHelper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0372B4D5932D08907A026F8877490B5 /* NRUReachabilityHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CD4EEC5900E96817692EFE1FDF1C6C /* NRUReachabilityHelper.m */; };
+		DFE2BA9D0E37505F4C7A65337BF70EF9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE596CB4BB565C60C8E0A6A52F29DD4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D3B8948B9F6B3B80870BC48A7EAD54E;
+			remoteInfo = NRUReachabilityHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28A84C9678710C63B3C56F2830A19CF4 /* Pods-NRUReachabilityHelper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NRUReachabilityHelper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		31E6230E61671B688233EBAA9329F895 /* NRUReachabilityHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NRUReachabilityHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36C5149A162BAF417EF0D074E489873E /* Pods-NRUReachabilityHelper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NRUReachabilityHelper_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		482AC706F3CD922C9FBA2E184CC50C5B /* NRUReachabilityHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NRUReachabilityHelper-umbrella.h"; sourceTree = "<group>"; };
+		5438DAC7ABFC85D77D4F8AD13AC04E6C /* NRUReachabilityHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NRUReachabilityHelper.modulemap; sourceTree = "<group>"; };
+		5929E58259B534F613997A1B354C6698 /* NRUReachabilityHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NRUReachabilityHelper.h; sourceTree = "<group>"; };
+		6067ECCC002698147D7416AD6189B5F3 /* Pods-NRUReachabilityHelper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NRUReachabilityHelper_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		68CD4EEC5900E96817692EFE1FDF1C6C /* NRUReachabilityHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = NRUReachabilityHelper.m; sourceTree = "<group>"; };
+		6E050E5033D82B49E622E62EB522FE74 /* Pods-NRUReachabilityHelper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NRUReachabilityHelper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6E277D67588FB0F79843F162FC8F333B /* NRUReachabilityHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NRUReachabilityHelper-prefix.pch"; sourceTree = "<group>"; };
+		7E9516D1BEAD358C0CC673D792F51857 /* Pods-NRUReachabilityHelper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NRUReachabilityHelper_Tests-dummy.m"; sourceTree = "<group>"; };
+		892F8EC57E0716F333AE59ADFC57EF5E /* Pods-NRUReachabilityHelper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NRUReachabilityHelper_Tests-umbrella.h"; sourceTree = "<group>"; };
+		8AE08BD6636603E2229FB19FBCAF91B6 /* Pods_NRUReachabilityHelper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NRUReachabilityHelper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91DBC3FE28BC397CA20C209DE6D5EF82 /* NRUReachabilityHelper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NRUReachabilityHelper.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A488FF438332AE3DF593B6B94E3C9C2B /* Pods-NRUReachabilityHelper_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NRUReachabilityHelper_Tests-resources.sh"; sourceTree = "<group>"; };
+		E14D33D64CEF7CE84408F0910797CC53 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8FFC1B8EFCDBF0F577F2C2C8E917EAD /* Pods-NRUReachabilityHelper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NRUReachabilityHelper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		F5A688E368CF7055E97C0644F6E0E68B /* Pods-NRUReachabilityHelper_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NRUReachabilityHelper_Tests.modulemap"; sourceTree = "<group>"; };
+		F70C1CABA5A6A688471C121EBC803263 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F71B617DD575E7E1F72BDEC9B1BE6323 /* NRUReachabilityHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NRUReachabilityHelper-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DECA4A74BA2F43BAC0FE6DBE0583C52B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFE2BA9D0E37505F4C7A65337BF70EF9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F98E4DEBCAF27644604A6E171F2471AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B9D86FA7DAA1F51E9D72DFCA8CE2E4B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A71DD1EE1AF79115284DC49A664409A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				31E6230E61671B688233EBAA9329F895 /* NRUReachabilityHelper.framework */,
+				8AE08BD6636603E2229FB19FBCAF91B6 /* Pods_NRUReachabilityHelper_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3430A391139B806AF1A3C4124A4E6221 /* NRUReachabilityHelper */ = {
+			isa = PBXGroup;
+			children = (
+				839D760EF3104BBABD41F8CB3495C427 /* Classes */,
+			);
+			path = NRUReachabilityHelper;
+			sourceTree = "<group>";
+		};
+		7CB37B6CE9DF3DA2AECAE114F53FAE13 /* NRUReachabilityHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3430A391139B806AF1A3C4124A4E6221 /* NRUReachabilityHelper */,
+				A7A501CA81274E59DECBD79F3CA4BEE6 /* Support Files */,
+			);
+			name = NRUReachabilityHelper;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				D94BD21B1848B0C9C2B8A31A54898FDC /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1A71DD1EE1AF79115284DC49A664409A /* Products */,
+				ADFAC34F7072F62784B3B51DB857E235 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		839D760EF3104BBABD41F8CB3495C427 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5929E58259B534F613997A1B354C6698 /* NRUReachabilityHelper.h */,
+				68CD4EEC5900E96817692EFE1FDF1C6C /* NRUReachabilityHelper.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A7A501CA81274E59DECBD79F3CA4BEE6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E14D33D64CEF7CE84408F0910797CC53 /* Info.plist */,
+				5438DAC7ABFC85D77D4F8AD13AC04E6C /* NRUReachabilityHelper.modulemap */,
+				91DBC3FE28BC397CA20C209DE6D5EF82 /* NRUReachabilityHelper.xcconfig */,
+				F71B617DD575E7E1F72BDEC9B1BE6323 /* NRUReachabilityHelper-dummy.m */,
+				6E277D67588FB0F79843F162FC8F333B /* NRUReachabilityHelper-prefix.pch */,
+				482AC706F3CD922C9FBA2E184CC50C5B /* NRUReachabilityHelper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/NRUReachabilityHelper";
+			sourceTree = "<group>";
+		};
+		ADFAC34F7072F62784B3B51DB857E235 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CDE60E5C1CA624559C19E2E94EF94077 /* Pods-NRUReachabilityHelper_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CDE60E5C1CA624559C19E2E94EF94077 /* Pods-NRUReachabilityHelper_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				F70C1CABA5A6A688471C121EBC803263 /* Info.plist */,
+				F5A688E368CF7055E97C0644F6E0E68B /* Pods-NRUReachabilityHelper_Tests.modulemap */,
+				28A84C9678710C63B3C56F2830A19CF4 /* Pods-NRUReachabilityHelper_Tests-acknowledgements.markdown */,
+				6E050E5033D82B49E622E62EB522FE74 /* Pods-NRUReachabilityHelper_Tests-acknowledgements.plist */,
+				7E9516D1BEAD358C0CC673D792F51857 /* Pods-NRUReachabilityHelper_Tests-dummy.m */,
+				36C5149A162BAF417EF0D074E489873E /* Pods-NRUReachabilityHelper_Tests-frameworks.sh */,
+				A488FF438332AE3DF593B6B94E3C9C2B /* Pods-NRUReachabilityHelper_Tests-resources.sh */,
+				892F8EC57E0716F333AE59ADFC57EF5E /* Pods-NRUReachabilityHelper_Tests-umbrella.h */,
+				E8FFC1B8EFCDBF0F577F2C2C8E917EAD /* Pods-NRUReachabilityHelper_Tests.debug.xcconfig */,
+				6067ECCC002698147D7416AD6189B5F3 /* Pods-NRUReachabilityHelper_Tests.release.xcconfig */,
+			);
+			name = "Pods-NRUReachabilityHelper_Tests";
+			path = "Target Support Files/Pods-NRUReachabilityHelper_Tests";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		D94BD21B1848B0C9C2B8A31A54898FDC /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CB37B6CE9DF3DA2AECAE114F53FAE13 /* NRUReachabilityHelper */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		95CA7D42D83957E4861270A3E1600393 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				542F0BF48EC715F4AE58B17C9F813446 /* Pods-NRUReachabilityHelper_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4F9CD6419F4D840DE94482F9328D95F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC6FD2CB313637FD7BCD168B41A76627 /* NRUReachabilityHelper-umbrella.h in Headers */,
+				4D57AD7A2C5A5B4C44A251C6068B21C9 /* NRUReachabilityHelper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2D3B8948B9F6B3B80870BC48A7EAD54E /* NRUReachabilityHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DA54CE404146D5B4400B18EA05D1330 /* Build configuration list for PBXNativeTarget "NRUReachabilityHelper" */;
+			buildPhases = (
+				E4D522A46702F85FF253B7DD6F332719 /* Sources */,
+				F98E4DEBCAF27644604A6E171F2471AD /* Frameworks */,
+				F4F9CD6419F4D840DE94482F9328D95F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NRUReachabilityHelper;
+			productName = NRUReachabilityHelper;
+			productReference = 31E6230E61671B688233EBAA9329F895 /* NRUReachabilityHelper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DAEE22DBADEBA96CD46CC7225533F415 /* Pods-NRUReachabilityHelper_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E337DFBA8B8FB803146069B4DA4D083E /* Build configuration list for PBXNativeTarget "Pods-NRUReachabilityHelper_Tests" */;
+			buildPhases = (
+				8C73D2D230238AB4766BF954365776E4 /* Sources */,
+				DECA4A74BA2F43BAC0FE6DBE0583C52B /* Frameworks */,
+				95CA7D42D83957E4861270A3E1600393 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A1FEC0D8DDC7601219390BD5DDDAF23 /* PBXTargetDependency */,
+			);
+			name = "Pods-NRUReachabilityHelper_Tests";
+			productName = "Pods-NRUReachabilityHelper_Tests";
+			productReference = 8AE08BD6636603E2229FB19FBCAF91B6 /* Pods_NRUReachabilityHelper_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1A71DD1EE1AF79115284DC49A664409A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D3B8948B9F6B3B80870BC48A7EAD54E /* NRUReachabilityHelper */,
+				DAEE22DBADEBA96CD46CC7225533F415 /* Pods-NRUReachabilityHelper_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8C73D2D230238AB4766BF954365776E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A320CD364942A766F75A921965FE4573 /* Pods-NRUReachabilityHelper_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4D522A46702F85FF253B7DD6F332719 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8563B0A7B25D9B05600BF670CE1FCB44 /* NRUReachabilityHelper-dummy.m in Sources */,
+				D0372B4D5932D08907A026F8877490B5 /* NRUReachabilityHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A1FEC0D8DDC7601219390BD5DDDAF23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NRUReachabilityHelper;
+			target = 2D3B8948B9F6B3B80870BC48A7EAD54E /* NRUReachabilityHelper */;
+			targetProxy = BE596CB4BB565C60C8E0A6A52F29DD4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		34FE9531DA9AF2820790339988D5FF41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E7424E49254745CC4071B6D62B0A7B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8FFC1B8EFCDBF0F577F2C2C8E917EAD /* Pods-NRUReachabilityHelper_Tests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NRUReachabilityHelper_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NRUReachabilityHelper_Tests/Pods-NRUReachabilityHelper_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NRUReachabilityHelper_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59AD630BCFDD26E4CA213C3F807BCA26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DBC3FE28BC397CA20C209DE6D5EF82 /* NRUReachabilityHelper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NRUReachabilityHelper/NRUReachabilityHelper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NRUReachabilityHelper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NRUReachabilityHelper/NRUReachabilityHelper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = NRUReachabilityHelper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C104F7F091290C3D1E248192F07FE689 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC1FAB11CA929D60D787C1D192A44F65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6067ECCC002698147D7416AD6189B5F3 /* Pods-NRUReachabilityHelper_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-NRUReachabilityHelper_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NRUReachabilityHelper_Tests/Pods-NRUReachabilityHelper_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_NRUReachabilityHelper_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E0AFB908866A4164C29864BB8FD0BBC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91DBC3FE28BC397CA20C209DE6D5EF82 /* NRUReachabilityHelper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/NRUReachabilityHelper/NRUReachabilityHelper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/NRUReachabilityHelper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/NRUReachabilityHelper/NRUReachabilityHelper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = NRUReachabilityHelper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C104F7F091290C3D1E248192F07FE689 /* Debug */,
+				34FE9531DA9AF2820790339988D5FF41 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DA54CE404146D5B4400B18EA05D1330 /* Build configuration list for PBXNativeTarget "NRUReachabilityHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0AFB908866A4164C29864BB8FD0BBC0 /* Debug */,
+				59AD630BCFDD26E4CA213C3F807BCA26 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E337DFBA8B8FB803146069B4DA4D083E /* Build configuration list for PBXNativeTarget "Pods-NRUReachabilityHelper_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E7424E49254745CC4071B6D62B0A7B7 /* Debug */,
+				CC1FAB11CA929D60D787C1D192A44F65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

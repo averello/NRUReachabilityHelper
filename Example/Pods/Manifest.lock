@@ -1,0 +1,16 @@
+PODS:
+  - NRUReachabilityHelper (1.0)
+
+DEPENDENCIES:
+  - NRUReachabilityHelper (from `../`)
+
+EXTERNAL SOURCES:
+  NRUReachabilityHelper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  NRUReachabilityHelper: 07dc067d193d8c8cea2d91afa7f5a24790e1e388
+
+PODFILE CHECKSUM: 657d092d8736d14ed0d5ec3c0a4a7231c730af02
+
+COCOAPODS: 1.2.1
