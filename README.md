@@ -1,29 +1,65 @@
-# NRUReachabilityHelper
+NRUReachabilityHelper
+=====================
 
-[![CI Status](http://img.shields.io/travis/Georges Boumis/NRUReachabilityHelper.svg?style=flat)](https://travis-ci.org/Georges Boumis/NRUReachabilityHelper)
-[![Version](https://img.shields.io/cocoapods/v/NRUReachabilityHelper.svg?style=flat)](http://cocoapods.org/pods/NRUReachabilityHelper)
-[![License](https://img.shields.io/cocoapods/l/NRUReachabilityHelper.svg?style=flat)](http://cocoapods.org/pods/NRUReachabilityHelper)
-[![Platform](https://img.shields.io/cocoapods/p/NRUReachabilityHelper.svg?style=flat)](http://cocoapods.org/pods/NRUReachabilityHelper)
+A utility class for testing network rechability statuses on iOS.
 
-## Example
+Documentation
+-------------
+This project uses [doxygen](http://www.stack.nl/~dimitri/doxygen/index.html) (http://www.stack.nl/~dimitri/doxygen/index.html) for the code documentation.
+Just point doxygen to the doc/Doxyfile and the html documentation will be generated.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-NRUReachabilityHelper is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "NRUReachabilityHelper"
+Command line exemple :
+```bash
+cd doc
+doxygen Doxyfile
 ```
+Now open the file html/index.html
 
-## Author
 
-Georges Boumis, developer.george.boumis@gmail.com
-
-## License
-
-NRUReachabilityHelper is available under the MIT license. See the LICENSE file for more info.
+Usage
+-----
+The notification driven approach:
+```objc
+NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+[notificationCenter addObserverForName:NRUNetworkReachabilityChangedNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
+	NRUReachabilityHelper *helper = note.object;
+	NRUReachabilityStatusNetworkStatus status = helper.currentReachabilityStatus;
+	switch (status) {
+		case NRUReachabilityStatusNotReachable:
+			// No internet connection
+			break;
+		case NRUReachabilityStatusReachableViaWiFi:
+		case NRUReachabilityStatusReachableViaWWAN:
+			// Internet
+			break;
+		default:
+			break;
+	}
+}];
+NRUReachabilityHelper *helper = [NRUReachabilityHelper reachabilityForInternetConnection];
+[helper startNotifier];
+//...
+[helper stopNotifier];
+[notificationCenter removeObserver:self name:NRUNetworkReachabilityChangedNotification object:nil];
+```
+and the block driven approach:
+```objc
+NRUReachabilityHelper *helper = [NRUReachabilityHelper reachabilityForInternetConnection];
+helper.notificationBlock = ^(NRUReachabilityHelper *reachabilityHelper) {
+	NRUReachabilityStatusNetworkStatus status = reachabilityHelper.currentReachabilityStatus;
+	switch (status) {
+		case NRUReachabilityStatusNotReachable:
+			// No internet connection
+			break;
+		case NRUReachabilityStatusReachableViaWiFi:
+		case NRUReachabilityStatusReachableViaWWAN:
+			// Internet
+			break;
+		default:
+			break;
+	}
+};
+[helper startNotifier];
+//...
+[helper stopNotifier];
+```
