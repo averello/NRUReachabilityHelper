@@ -1,0 +1,6 @@
+use_frameworks!
+target 'NRUReachabilityHelper_Tests' do
+  pod 'NRUReachabilityHelper', :path => '../'
+  
+  
+end
