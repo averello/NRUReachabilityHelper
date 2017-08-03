@@ -1,5 +1,5 @@
 PODS:
-  - NRUReachabilityHelper (1.0)
+  - NRUReachabilityHelper (1.0.1)
 
 DEPENDENCIES:
   - NRUReachabilityHelper (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NRUReachabilityHelper: 07dc067d193d8c8cea2d91afa7f5a24790e1e388
+  NRUReachabilityHelper: 3893f59d8435c5f65b3357ce5bf895d04049fc26
 
-PODFILE CHECKSUM: 657d092d8736d14ed0d5ec3c0a4a7231c730af02
+PODFILE CHECKSUM: dae058f0e6c6222547546c536b168c5457c3e8f3
 
 COCOAPODS: 1.2.1

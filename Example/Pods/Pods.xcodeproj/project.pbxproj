@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,10 +29,10 @@
 
 /* Begin PBXFileReference section */
 		28A84C9678710C63B3C56F2830A19CF4 /* Pods-NRUReachabilityHelper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NRUReachabilityHelper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		31E6230E61671B688233EBAA9329F895 /* NRUReachabilityHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NRUReachabilityHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31E6230E61671B688233EBAA9329F895 /* NRUReachabilityHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = NRUReachabilityHelper.framework; path = NRUReachabilityHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36C5149A162BAF417EF0D074E489873E /* Pods-NRUReachabilityHelper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NRUReachabilityHelper_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		482AC706F3CD922C9FBA2E184CC50C5B /* NRUReachabilityHelper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NRUReachabilityHelper-umbrella.h"; sourceTree = "<group>"; };
-		5438DAC7ABFC85D77D4F8AD13AC04E6C /* NRUReachabilityHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = NRUReachabilityHelper.modulemap; sourceTree = "<group>"; };
+		5438DAC7ABFC85D77D4F8AD13AC04E6C /* NRUReachabilityHelper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = NRUReachabilityHelper.modulemap; sourceTree = "<group>"; };
 		5929E58259B534F613997A1B354C6698 /* NRUReachabilityHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = NRUReachabilityHelper.h; sourceTree = "<group>"; };
 		6067ECCC002698147D7416AD6189B5F3 /* Pods-NRUReachabilityHelper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NRUReachabilityHelper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -41,13 +41,13 @@
 		6E277D67588FB0F79843F162FC8F333B /* NRUReachabilityHelper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NRUReachabilityHelper-prefix.pch"; sourceTree = "<group>"; };
 		7E9516D1BEAD358C0CC673D792F51857 /* Pods-NRUReachabilityHelper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NRUReachabilityHelper_Tests-dummy.m"; sourceTree = "<group>"; };
 		892F8EC57E0716F333AE59ADFC57EF5E /* Pods-NRUReachabilityHelper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NRUReachabilityHelper_Tests-umbrella.h"; sourceTree = "<group>"; };
-		8AE08BD6636603E2229FB19FBCAF91B6 /* Pods_NRUReachabilityHelper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NRUReachabilityHelper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AE08BD6636603E2229FB19FBCAF91B6 /* Pods_NRUReachabilityHelper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_NRUReachabilityHelper_Tests.framework; path = "Pods-NRUReachabilityHelper_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91DBC3FE28BC397CA20C209DE6D5EF82 /* NRUReachabilityHelper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NRUReachabilityHelper.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A488FF438332AE3DF593B6B94E3C9C2B /* Pods-NRUReachabilityHelper_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NRUReachabilityHelper_Tests-resources.sh"; sourceTree = "<group>"; };
 		E14D33D64CEF7CE84408F0910797CC53 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8FFC1B8EFCDBF0F577F2C2C8E917EAD /* Pods-NRUReachabilityHelper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NRUReachabilityHelper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		F5A688E368CF7055E97C0644F6E0E68B /* Pods-NRUReachabilityHelper_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-NRUReachabilityHelper_Tests.modulemap"; sourceTree = "<group>"; };
+		F5A688E368CF7055E97C0644F6E0E68B /* Pods-NRUReachabilityHelper_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-NRUReachabilityHelper_Tests.modulemap"; sourceTree = "<group>"; };
 		F70C1CABA5A6A688471C121EBC803263 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F71B617DD575E7E1F72BDEC9B1BE6323 /* NRUReachabilityHelper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NRUReachabilityHelper-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +86,7 @@
 			children = (
 				839D760EF3104BBABD41F8CB3495C427 /* Classes */,
 			);
+			name = NRUReachabilityHelper;
 			path = NRUReachabilityHelper;
 			sourceTree = "<group>";
 		};
@@ -116,6 +117,7 @@
 				5929E58259B534F613997A1B354C6698 /* NRUReachabilityHelper.h */,
 				68CD4EEC5900E96817692EFE1FDF1C6C /* NRUReachabilityHelper.m */,
 			);
+			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -338,7 +340,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -456,7 +457,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};

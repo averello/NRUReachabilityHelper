@@ -1,6 +1,6 @@
 use_frameworks!
 target 'NRUReachabilityHelper_Tests' do
+  platform :ios, '8.0' 
   pod 'NRUReachabilityHelper', :path => '../'
-  
   
 end
