@@ -158,27 +158,27 @@ NS_CLASS_AVAILABLE(10_7, 5_0) @interface NRUReachabilityHelper: NSObject
  *	@returns a network reachability helper that checks if the device is connected to a WiFi.
  */
 + (nullable NRUReachabilityHelper *)reachabilityForLocalWiFi;
+
 /*!
  *	@public
  *	@brief Start listening for reachability notifications on the current run loop
 	@details Registers the network reachability helper to the current loop. If more subsequent calls are made to this method without calling @ref stopNotifier in between then all but the first one will return `NO`. In the case subsequent calls
  *	@returns `YES` if the registration completed successfully, `NO` if it fails to schedule on the current run loop.
  */
-
 - (BOOL)startNotifier;
+
 /*!
  *	@public
  *	@brief Stop listening for reachability notifications.
  */
-
 - (void)stopNotifier;
+
 /*!
  *	@public
  *	@brief Indicates whether or not a connection is required.
 	@details WWAN may be available, but not active until a connection has been established. WiFi may require a connection for VPN on Demand.
 	@returns `YES` if a connection is required and `NO` otherwise.
  */
-
 - (BOOL)connectionRequired;
 
 @end
